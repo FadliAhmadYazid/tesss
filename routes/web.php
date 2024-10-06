@@ -1,11 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PegawaiController;
 
-Route::get('/', function () {
-    return view('login');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
 
-Route::get('/register', function () {
-    return view('register');
-});
+
+Route::resource("/pegawai", PegawaiController::class);
+
+Route::resource("/", PegawaiController::class);
